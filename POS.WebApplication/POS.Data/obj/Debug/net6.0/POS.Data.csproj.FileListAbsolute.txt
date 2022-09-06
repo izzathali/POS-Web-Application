@@ -10,3 +10,8 @@ E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\obj\De
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\obj\Debug\net6.0\refint\POS.Data.dll
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\obj\Debug\net6.0\POS.Data.pdb
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\obj\Debug\net6.0\ref\POS.Data.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\bin\Debug\net6.0\POS.Data.runtimeconfig.json
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\obj\Debug\net6.0\POS.Data.genruntimeconfig.cache
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\bin\Debug\net6.0\POS.Model.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\bin\Debug\net6.0\POS.Model.pdb
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.Data\obj\Debug\net6.0\POS.Data.csproj.CopyComplete

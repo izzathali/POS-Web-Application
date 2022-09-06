@@ -634,6 +634,16 @@
             "rid": "win"
           }
         }
+      },
+      "POS.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/POS.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.Model.dll": {}
+        }
       }
     }
   },
@@ -1855,13 +1865,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "POS.Model/1.0.0": {
+      "type": "project",
+      "path": "../POS.Model/POS.Model.csproj",
+      "msbuildProject": "../POS.Model/POS.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.8"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
+      "POS.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1890,7 +1906,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj": {
+              "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

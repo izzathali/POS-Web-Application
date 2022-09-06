@@ -10,3 +10,6 @@ E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\obj\Deb
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\obj\Debug\net6.0\refint\POS.IBL.dll
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\obj\Debug\net6.0\POS.IBL.pdb
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\obj\Debug\net6.0\ref\POS.IBL.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\bin\Debug\net6.0\POS.Model.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\bin\Debug\net6.0\POS.Model.pdb
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.IBL\obj\Debug\net6.0\POS.IBL.csproj.CopyComplete

@@ -4,14 +4,207 @@
     "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj": {}
   },
   "projects": {
-    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj": {
+    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj",
-        "projectName": "POS.WebApp",
-        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj",
+        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj",
+        "projectName": "POS.BL",
+        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj",
         "packagesPath": "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\",
-        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\obj\\",
+        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Izzath Bin Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj"
+              },
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj",
+        "projectName": "POS.Data",
+        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj",
+        "packagesPath": "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\",
+        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Izzath Bin Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj",
+        "projectName": "POS.IBL",
+        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj",
+        "packagesPath": "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\",
+        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Izzath Bin Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj",
+        "projectName": "POS.Model",
+        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj",
+        "packagesPath": "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\",
+        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Izzath Bin Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,7 +232,135 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj",
+        "projectName": "POS.ViewModel",
+        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\",
+        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Izzath Bin Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj",
+        "projectName": "POS.WebApp",
+        "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj",
+        "packagesPath": "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\",
+        "outputPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Izzath Bin Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj"
+              },
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj"
+              },
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj"
+              },
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj"
+              },
+              "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj": {
+                "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "AspNetCoreHero.ToastNotification": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.8, )"

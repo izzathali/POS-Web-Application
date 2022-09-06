@@ -2,6 +2,29 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AspNetCoreHero.ToastNotification/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/net5.0/AspNetCoreHero.ToastNotification.Views.dll": {},
+          "lib/net5.0/AspNetCoreHero.ToastNotification.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/AspNetCoreHero.ToastNotification.Views.dll": {},
+          "lib/net5.0/AspNetCoreHero.ToastNotification.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "buildTransitive/AspNetCoreHero.ToastNotification.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/AspNetCoreHero.ToastNotification.props": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -409,6 +432,15 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -634,10 +666,96 @@
             "rid": "win"
           }
         }
+      },
+      "POS.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "POS.Data": "1.0.0",
+          "POS.IBL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/POS.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.BL.dll": {}
+        }
+      },
+      "POS.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
+          "POS.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/POS.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.Data.dll": {}
+        }
+      },
+      "POS.IBL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "POS.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/POS.IBL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.IBL.dll": {}
+        }
+      },
+      "POS.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/POS.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.Model.dll": {}
+        }
+      },
+      "POS.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AspNetCoreHero.ToastNotification/1.1.0": {
+      "sha512": "bCAYeD+b2pRelcOrHMNtYGVtRq+J2u+SAaND33v3u6qZCatHf4XSZOEPhBfCKJAjMGvsggtPKaNFnrv4VhwOfA==",
+      "type": "package",
+      "path": "aspnetcorehero.toastnotification/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
+        "aspnetcorehero.toastnotification.nuspec",
+        "build/AspNetCoreHero.ToastNotification.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/AspNetCoreHero.ToastNotification.props",
+        "buildTransitive/AspNetCoreHero.ToastNotification.props",
+        "lib/net5.0/AspNetCoreHero.ToastNotification.Views.dll",
+        "lib/net5.0/AspNetCoreHero.ToastNotification.dll",
+        "lib/netcoreapp3.1/AspNetCoreHero.ToastNotification.Views.dll",
+        "lib/netcoreapp3.1/AspNetCoreHero.ToastNotification.dll",
+        "logo-transparent.png",
+        "staticwebassets/notyf.min.css",
+        "staticwebassets/notyf.min.js",
+        "staticwebassets/toastify.css",
+        "staticwebassets/toastify.js"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -1372,6 +1490,37 @@
         "version.txt"
       ]
     },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -1855,13 +2004,44 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "POS.BL/1.0.0": {
+      "type": "project",
+      "path": "../POS.BL/POS.BL.csproj",
+      "msbuildProject": "../POS.BL/POS.BL.csproj"
+    },
+    "POS.Data/1.0.0": {
+      "type": "project",
+      "path": "../POS.Data/POS.Data.csproj",
+      "msbuildProject": "../POS.Data/POS.Data.csproj"
+    },
+    "POS.IBL/1.0.0": {
+      "type": "project",
+      "path": "../POS.IBL/POS.IBL.csproj",
+      "msbuildProject": "../POS.IBL/POS.IBL.csproj"
+    },
+    "POS.Model/1.0.0": {
+      "type": "project",
+      "path": "../POS.Model/POS.Model.csproj",
+      "msbuildProject": "../POS.Model/POS.Model.csproj"
+    },
+    "POS.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../POS.ViewModel/POS.ViewModel.csproj",
+      "msbuildProject": "../POS.ViewModel/POS.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AspNetCoreHero.ToastNotification >= 1.1.0",
       "Microsoft.EntityFrameworkCore >= 6.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.8"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
+      "POS.BL >= 1.0.0",
+      "POS.Data >= 1.0.0",
+      "POS.IBL >= 1.0.0",
+      "POS.Model >= 1.0.0",
+      "POS.ViewModel >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1890,7 +2070,23 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj": {
+              "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.BL\\POS.BL.csproj"
+            },
+            "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj": {
+              "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Data\\POS.Data.csproj"
+            },
+            "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj": {
+              "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.IBL\\POS.IBL.csproj"
+            },
+            "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj": {
+              "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.Model\\POS.Model.csproj"
+            },
+            "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj": {
+              "projectPath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.ViewModel\\POS.ViewModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1903,6 +2099,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AspNetCoreHero.ToastNotification": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.8, )"

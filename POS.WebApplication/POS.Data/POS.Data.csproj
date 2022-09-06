@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\POS.Model\POS.Model.csproj" />
+  </ItemGroup>
+
 </Project>

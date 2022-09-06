@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jex+dseF2hreReK9TmjQlRItjcfeGlNYUMdJO9r3atgy/ReuMYq0N793v1XMqUOtvNfAtdNUF0EU/74bob/o9w==",
+  "dgSpecHash": "oGkMe/lG/exM35FtnF/TGFOXd3nfJwUMu6yAFllsW7Jr/LV+1/KGI5WoI/E5hTgq73QItCUYjrMbOOxldk+Aow==",
   "success": true,
   "projectFilePath": "E:\\LEARNING\\POS - Web App\\POS-Web-Application\\POS.WebApplication\\POS.WebApp\\POS.WebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
@@ -33,6 +34,7 @@
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Izzath Bin Ibrahim\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

@@ -10,3 +10,10 @@ E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\obj\Debu
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\obj\Debug\net6.0\refint\POS.BL.dll
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\obj\Debug\net6.0\POS.BL.pdb
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\obj\Debug\net6.0\ref\POS.BL.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\bin\Debug\net6.0\POS.Data.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\bin\Debug\net6.0\POS.IBL.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\bin\Debug\net6.0\POS.Model.dll
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\bin\Debug\net6.0\POS.Data.pdb
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\bin\Debug\net6.0\POS.IBL.pdb
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\bin\Debug\net6.0\POS.Model.pdb
+E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.BL\obj\Debug\net6.0\POS.BL.csproj.CopyComplete
