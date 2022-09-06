@@ -16,6 +16,7 @@ namespace POS.Data
         }
 
         public DbSet<CategoryM> Categories { get; set; }
+        public DbSet<UnitM> Units { get; set; }
 
     }
 }

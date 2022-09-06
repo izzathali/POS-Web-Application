@@ -20,6 +20,7 @@ namespace POS.BL
         //Create Category
         public async Task<int> Create(CategoryM t)
         {
+            t.CreatedDate = DateTime.Now;
             dbContext.Categories.Add(t);
             return await dbContext.SaveChangesAsync();
         }
