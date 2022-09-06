@@ -16,9 +16,9 @@ namespace POS.WebApp.Controllers
             _notyf = notyf;
         }
         // GET: UnitController
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            return View(await _iUnitRepo.GetAll());
         }
 
         // GET: UnitController/Details/5
