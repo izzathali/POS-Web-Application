@@ -16,9 +16,10 @@ namespace POS.WebApp.Controllers
             _notyf = notyf;
         }
         // GET: CategoryController
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var category = await _iCategoryRepo.GetAll();
+            return View(category);
         }
 
         // GET: CategoryController/Details/5
