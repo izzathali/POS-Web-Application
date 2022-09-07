@@ -335,15 +335,7 @@
                         </li>
 
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Widgets
-                                    <span class="right badge badge-danger">New</span>
-                                </p>
-                            </a>
-                        </li>
+                        <li class="nav-header">OPTIONS</li>
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -415,6 +407,32 @@
                                     <a asp-controller="Brand" asp-action="Index" class="nav-link">
                                         <i class="fa fa-file-pdf nav-icon"></i>
                                         <p>Brand Report</p>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-expand-arrows-alt	"></i>
+                                <p>
+                                    Size
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-controller="Size" asp-action="Create" class="nav-link">
+                                        <i class="fa fa-plus-circle	nav-icon"></i>
+                                        <p>Add Size</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="Size" asp-action="Index" class="nav-link">
+                                        <i class="fa fa-file-pdf nav-icon"></i>
+                                        <p>Size Report</p>
                                     </a>
                                 </li>
 
