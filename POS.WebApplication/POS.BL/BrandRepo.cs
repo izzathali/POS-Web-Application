@@ -1,4 +1,5 @@
-﻿using POS.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using POS.Data;
 using POS.IBL;
 using POS.Model;
 using System;
@@ -29,9 +30,12 @@ namespace POS.BL
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<BrandM>> GetAll()
+        public async Task<IEnumerable<BrandM>> GetAll()
         {
-            throw new NotImplementedException();
+            return await dbContext
+                .Brands
+                .Where(i => i.IsDeleted == false)
+                .ToListAsync();
         }
 
         public Task<BrandM> GetById(int id)

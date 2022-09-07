@@ -32,7 +32,10 @@ namespace POS.BL
 
         public async Task<IEnumerable<UnitM>> GetAll()
         {
-            return await dbContext.Units.ToListAsync();
+            return await dbContext
+                .Units
+                .Where(i => i.IsDeleted == false)
+                .ToListAsync();
         }
 
         public async Task<UnitM> GetById(int id)

@@ -1,1 +1,82 @@
-﻿
+﻿@using POS.Model
+@model IEnumerable<BrandM>
+
+@{
+    ViewData["Title"] = "Brand Report";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <a asp-action="Create" class="btn btn-secondary">
+                    <span class="tf-icons fas fa-plus"></span>&nbsp; Add Brand
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Brand</a></li>
+                    <li class="breadcrumb-item active">Report</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+
+                <div class="card card-lightblue">
+                    <div class="card-header">
+                        <h3 class="card-title">Brand Report</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Brand</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @{
+                                    if (@Model != null)
+                                    {
+                                        @foreach (var item in @Model)
+                                        {
+                                            <tr>
+                                                <td>@item.Brand</td>
+                                                <td>
+                                                    <a asp-action="Edit" class="btn btn-warning btn-xs" asp-route-id="@item.BrandId"><i class="fas fa-edit me-1"></i> Edit</a>
+                                                    <a asp-action="Delete" class="btn btn-danger btn-xs" asp-route-id="@item.BrandId"><i class="fas fa-trash me-1"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+
