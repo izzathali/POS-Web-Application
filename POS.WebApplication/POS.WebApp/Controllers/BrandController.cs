@@ -10,15 +10,15 @@ namespace POS.WebApp.Controllers
         private readonly IBrandRepo _iBrandRepo;
         private readonly INotyfService _notyf;
 
-        public BrandController(IBrandRepo iBrandRepo,INotyfService notyf)
+        public BrandController(IBrandRepo iBrandRepo, INotyfService notyf)
         {
             _iBrandRepo = iBrandRepo;
             _notyf = notyf;
         }
         // GET: BrandController
-        public  ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            return View(await _iBrandRepo.GetAll());
         }
 
         // GET: BrandController/Details/5
