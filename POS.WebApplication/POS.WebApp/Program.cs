@@ -13,6 +13,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IUnitRepo, UnitRepo>();
+builder.Services.AddScoped<IBrandRepo, BrandRepo>();
 
 
 

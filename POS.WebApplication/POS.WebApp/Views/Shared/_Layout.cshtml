@@ -346,7 +346,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link" >
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-building"></i>
                                 <p>
                                     Category
@@ -371,7 +371,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" >
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-balance-scale"></i>
                                 <p>
                                     Unit
@@ -386,9 +386,35 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a asp-controller="Category" asp-action="Index" class="nav-link">
+                                    <a asp-controller="Unit" asp-action="Index" class="nav-link">
                                         <i class="fa fa-file-pdf nav-icon"></i>
                                         <p>Unit Report</p>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-gg-circle"></i>
+                                <p>
+                                    Brand
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-controller="Brand" asp-action="Create" class="nav-link">
+                                        <i class="fa fa-plus-circle	nav-icon"></i>
+                                        <p>Add Brand</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="Brand" asp-action="Index" class="nav-link">
+                                        <i class="fa fa-file-pdf nav-icon"></i>
+                                        <p>Brand Report</p>
                                     </a>
                                 </li>
 
