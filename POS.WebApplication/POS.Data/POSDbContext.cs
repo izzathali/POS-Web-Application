@@ -19,6 +19,7 @@ namespace POS.Data
         public DbSet<UnitM> Units { get; set; }
         public DbSet<BrandM> Brands { get; set; }
         public DbSet<SizeM> Sizes { get; set; }
+        public DbSet<ColourM> Colours { get; set; }
 
     }
 }

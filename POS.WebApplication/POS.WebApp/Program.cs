@@ -15,6 +15,7 @@ builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IUnitRepo, UnitRepo>();
 builder.Services.AddScoped<IBrandRepo, BrandRepo>();
 builder.Services.AddScoped<ISizeRepo, SizeRepo>();
+builder.Services.AddScoped<IColourRepo, ColourRepo>();
 
 
 

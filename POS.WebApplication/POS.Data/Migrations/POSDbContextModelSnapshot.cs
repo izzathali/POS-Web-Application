@@ -74,6 +74,32 @@ namespace POS.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("POS.Model.ColourM", b =>
+                {
+                    b.Property<int>("ColourId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColourId"), 1L, 1);
+
+                    b.Property<string>("ColourCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ColourId");
+
+                    b.ToTable("Colours");
+                });
+
             modelBuilder.Entity("POS.Model.SizeM", b =>
                 {
                     b.Property<int>("SizeId")
