@@ -100,6 +100,91 @@ namespace POS.Data.Migrations
                     b.ToTable("Colours");
                 });
 
+            modelBuilder.Entity("POS.Model.ProductM", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
+
+                    b.Property<string>("Barcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int?>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ColourId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CostCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ProductCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ProductDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<decimal>("SellingPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("StockQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitCost")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("UnitId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool?>("WithZip")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ProductId");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("ColourId");
+
+                    b.HasIndex("SizeId");
+
+                    b.HasIndex("UnitId");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("POS.Model.SizeM", b =>
                 {
                     b.Property<int>("SizeId")
@@ -150,6 +235,43 @@ namespace POS.Data.Migrations
                     b.HasKey("UnitId");
 
                     b.ToTable("Units");
+                });
+
+            modelBuilder.Entity("POS.Model.ProductM", b =>
+                {
+                    b.HasOne("POS.Model.BrandM", "brand")
+                        .WithMany()
+                        .HasForeignKey("BrandId");
+
+                    b.HasOne("POS.Model.CategoryM", "category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POS.Model.ColourM", "colour")
+                        .WithMany()
+                        .HasForeignKey("ColourId");
+
+                    b.HasOne("POS.Model.SizeM", "size")
+                        .WithMany()
+                        .HasForeignKey("SizeId");
+
+                    b.HasOne("POS.Model.UnitM", "unit")
+                        .WithMany()
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("brand");
+
+                    b.Navigation("category");
+
+                    b.Navigation("colour");
+
+                    b.Navigation("size");
+
+                    b.Navigation("unit");
                 });
 #pragma warning restore 612, 618
         }
