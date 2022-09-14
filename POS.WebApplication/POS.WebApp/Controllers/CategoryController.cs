@@ -43,9 +43,9 @@ namespace POS.WebApp.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    int cat = await _iCategoryRepo.Create(categoryM);
+                    int changes = await _iCategoryRepo.Create(categoryM);
 
-                    if (cat > 0)
+                    if (changes > 0)
                     {
                         _notyf.Success("Category Saved Successfully!!", 4);
                         return RedirectToAction(nameof(Index));

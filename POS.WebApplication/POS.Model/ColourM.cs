@@ -14,5 +14,12 @@ namespace POS.Model
         public int ColourId { get; set; }
         [Column(TypeName = "nvarchar(20)")]
         public string ColourCode { get; set; } = string.Empty;
+        public string HtmlColour
+        {
+            get
+            {
+                return string.Format("<span style='background-color:{0}'>{1}</span>", ColourCode, ColourCode);
+            }
+        }
     }
 }

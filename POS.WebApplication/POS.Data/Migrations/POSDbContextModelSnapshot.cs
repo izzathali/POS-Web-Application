@@ -109,7 +109,6 @@ namespace POS.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
 
                     b.Property<string>("Barcode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<int?>("BrandId")
@@ -122,13 +121,12 @@ namespace POS.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CostCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Discount")
+                    b.Property<decimal?>("Discount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("IsActive")
@@ -142,7 +140,6 @@ namespace POS.Data.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ProductDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
@@ -167,8 +164,8 @@ namespace POS.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("WithZip")
-                        .HasColumnType("bit");
+                    b.Property<string>("Zip")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductId");
 

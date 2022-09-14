@@ -1,1 +1,116 @@
-﻿
+﻿@using POS.Model
+@model IEnumerable<ProductM>
+@{
+    ViewData["Title"] = "Product Report";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <a asp-action="Create" class="btn btn-secondary">
+                    <span class="tf-icons fas fa-plus"></span>&nbsp; Add Product
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Product</a></li>
+                    <li class="breadcrumb-item active">Report</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+
+                <div class="card card-lightblue">
+                    <div class="card-header">
+                        <h3 class="card-title">Products Report</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Product Code</th>
+                                    <th>Barcode</th>
+                                    <th>Product</th>
+                                    <th>Category</th>
+                                    <th>Unit</th>
+                                    <th>Brand</th>
+                                    <th>Size</th>
+                                    <th>Colour</th>
+                                    <th>Zip</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    if (@Model != null)
+                                    {
+                                        @foreach (var item in @Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @item.ProductCode
+                                                </td>
+                                                <td>@item.Barcode</td>
+                                                <td>@item.ProductName</td>
+                                                <td>@item.category?.Category</td>
+                                                <td>@item.unit?.Unit</td>
+                                                <td>@item.brand?.Brand</td>
+                                                <td>@item.size?.Size</td>
+                                                <td>
+                                                    <p style="background-color:@item.colour?.ColourCode"> @item.colour?.ColourCode</p>
+                                                </td>
+                                                <td>@item.Zip</td>
+
+                                                <td>
+                                                    <a class="btn btn-warning btn-xs" asp-action="Edit" asp-route-id="@item.ProductId"><i class="fas fa-edit me-1"></i></a>
+                                                    <a class="btn btn-danger btn-xs" asp-action="Delete" asp-route-id="@item.ProductId"><i class="fas fa-trash me-1"></i></a>
+                                                </td>
+                                            </tr>
+
+                                        }
+                                    }
+
+                                }
+
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                   <th>Product Code</th>
+                                    <th>Barcode</th>
+                                    <th>Product</th>
+                                    <th>Category</th>
+                                    <th>Unit</th>
+                                    <th>Brand</th>
+                                    <th>Size</th>
+                                    <th>Colour</th>
+                                    <th>Zip</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
