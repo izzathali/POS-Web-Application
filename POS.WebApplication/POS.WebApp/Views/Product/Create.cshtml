@@ -1,0 +1,266 @@
+﻿@using POS.Model
+@model ProductM
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="~/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- Bootstrap Color Picker -->
+<link rel="stylesheet" href="~/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+<!-- Tempusdominus Bootstrap 4 -->
+<link rel="stylesheet" href="~/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="~/assets/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="~/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<!-- Bootstrap4 Duallistbox -->
+<link rel="stylesheet" href="~/assets/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+<!-- BS Stepper -->
+<link rel="stylesheet" href="~/assets/plugins/bs-stepper/css/bs-stepper.min.css">
+<!-- dropzonejs -->
+<link rel="stylesheet" href="~/assets/plugins/dropzone/min/dropzone.min.css">
+
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Product</a></li>
+                    <li class="breadcrumb-item active">Add</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-lightblue">
+                    <div class="card-header">
+                        <h3 class="card-title">Add Product</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="bs-stepper">
+
+                            <!-- form start -->
+                            <form asp-action="Create">
+
+                                <div class="bs-stepper-header" role="tablist">
+                                    <div class="line"></div>
+                                    <!-- your steps here -->
+                                    <div class="step" data-target="#logins-part">
+                                        <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                                            <span class="bs-stepper-circle">1</span>
+                                            <span class="bs-stepper-label">Product Details</span>
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#information-part">
+                                        <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                            <span class="bs-stepper-circle">2</span>
+                                            <span class="bs-stepper-label">Product Variation</span>
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="bs-stepper-content">
+
+                                    <!-- your steps content here -->
+                                    <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Product Code</label>
+                                                    <input asp-for="ProductCode" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter product code">
+                                                    <span asp-validation-for="ProductCode" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Barcode</label>
+                                                    <input asp-for="Barcode" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter barcode">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Category</label>
+                                                    <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">
+                                                        <option selected>---SELECT---</option>
+                                                    </select>
+                                                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Product Name</label>
+                                                    <input asp-for="ProductName" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter product name">
+                                                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Unit</label>
+                                                    <select asp-for="UnitId" class="form-control" asp-items="ViewBag.UnitId">
+                                                        <option selected>---SELECT---</option>
+                                                    </select>
+                                                    <span asp-validation-for="UnitId" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <!-- checkbox -->
+                                                <div class="form-group clearfix pull-right">
+                                                    <br />
+                                                    <br />
+                                                    <div class="icheck-success d-inline">
+                                                        <input asp-for="IsActive" type="checkbox" id="checkboxPrimary3" checked>
+                                                        <label for="checkboxPrimary3">
+                                                            Active
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Product Description</label>
+                                                    <textarea asp-for="ProductDescription" type="text" rows="5" class="form-control" id="exampleInputEmail1" placeholder="Enter product description"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Cost Code</label>
+                                                    <input asp-for="CostCode" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ex. BCA">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Unit Cost</label>
+                                                    <input asp-for="UnitCost" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter unit cost">
+                                                    <span asp-validation-for="UnitCost" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Selling Price</label>
+                                                    <input asp-for="SellingPrice" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter selling price">
+                                                    <span asp-validation-for="SellingPrice" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Discount</label>
+                                                    <input asp-for="Discount" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter discount amount">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <button type="button" class="btn btn-primary" onclick="stepper.next()">
+                                                <span class="tf-icons fas fa-chevron-circle-right"></span>&nbsp; Next
+                                            </button>
+                                            <button type="reset" class="btn btn-default">
+                                                <span class="tf-icons fas fa-times"></span>&nbsp; Cancel
+                                            </button>
+                                            <button class="btn btn-outline-info pull-right" asp-action="Index">
+                                                <span class="tf-icons fas fa-list-ul"></span>&nbsp; View List
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Brand</label>
+                                                    <select asp-for="BrandId" class="form-control" asp-items="ViewBag.BrandId">
+                                                        <option disabled selected>---SELECT---</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Size</label>
+                                                    <select asp-for="SizeId" class="form-control" asp-items="ViewBag.SizeId">
+                                                        <option disabled  selected>---SELECT---</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Colour</label>
+                                                    <select asp-for="ColourId" class="form-control"  asp-items="ViewBag.ColourId">
+                                                        <option disabled selected>---SELECT---</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                 <div class="form-group">
+                                                    <label for="exampleInputEmail1">Zip</label>
+                                                    <select asp-for="Zip" class="form-control">
+                                                        <option disabled selected>---SELECT---</option>
+                                                        <option>W/Z</option>
+                                                        <option>WO/Z</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="card-footer">
+                                            <div class="row">
+                                                <div class="col-md-12">
+
+                                                    <button type="button" class="btn btn-primary" onclick="stepper.previous()">
+                                                        <span class="tf-icons fas fa-chevron-circle-left"></span>&nbsp; Previous
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <span class="tf-icons fas fa-save"></span>&nbsp; Save
+                                                    </button>
+                                                    <button type="reset" class="btn btn-default">
+                                                        <span class="tf-icons fas fa-times"></span>&nbsp; Cancel
+                                                    </button>
+                                                    <button class="btn btn-outline-info pull-right" asp-action="Index">
+                                                        <span class="tf-icons fas fa-list-ul"></span>&nbsp; View List
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+</section>
+
