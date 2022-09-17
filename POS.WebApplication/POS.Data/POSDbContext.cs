@@ -21,6 +21,7 @@ namespace POS.Data
         public DbSet<SizeM> Sizes { get; set; }
         public DbSet<ColourM> Colours { get; set; }
         public DbSet<ProductM> Products { get; set; }
+        public DbSet<SubProductM> SubProducts { get; set; }
 
     }
 }

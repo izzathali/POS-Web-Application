@@ -117,27 +117,14 @@ namespace POS.Data.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ColourId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CostCode")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<decimal?>("Discount")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
-
-                    b.Property<string>("ProductCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ProductDescription")
                         .HasColumnType("nvarchar(max)");
@@ -146,36 +133,17 @@ namespace POS.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(400)");
 
-                    b.Property<decimal>("SellingPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int?>("SizeId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("StockQty")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("UnitCost")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<int>("UnitId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Zip")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ProductId");
 
                     b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("ColourId");
-
-                    b.HasIndex("SizeId");
 
                     b.HasIndex("UnitId");
 
@@ -206,6 +174,65 @@ namespace POS.Data.Migrations
                     b.HasKey("SizeId");
 
                     b.ToTable("Sizes");
+                });
+
+            modelBuilder.Entity("POS.Model.SubProductM", b =>
+                {
+                    b.Property<int>("SubProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubProductId"), 1L, 1);
+
+                    b.Property<int?>("ColourId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CostCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ProductCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("SellingPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("StockQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitCost")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Zip")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SubProductId");
+
+                    b.HasIndex("ColourId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("SizeId");
+
+                    b.ToTable("SubProducts");
                 });
 
             modelBuilder.Entity("POS.Model.UnitM", b =>
@@ -246,14 +273,6 @@ namespace POS.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Model.ColourM", "colour")
-                        .WithMany()
-                        .HasForeignKey("ColourId");
-
-                    b.HasOne("POS.Model.SizeM", "size")
-                        .WithMany()
-                        .HasForeignKey("SizeId");
-
                     b.HasOne("POS.Model.UnitM", "unit")
                         .WithMany()
                         .HasForeignKey("UnitId")
@@ -264,11 +283,30 @@ namespace POS.Data.Migrations
 
                     b.Navigation("category");
 
+                    b.Navigation("unit");
+                });
+
+            modelBuilder.Entity("POS.Model.SubProductM", b =>
+                {
+                    b.HasOne("POS.Model.ColourM", "colour")
+                        .WithMany()
+                        .HasForeignKey("ColourId");
+
+                    b.HasOne("POS.Model.ProductM", "product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POS.Model.SizeM", "size")
+                        .WithMany()
+                        .HasForeignKey("SizeId");
+
                     b.Navigation("colour");
 
-                    b.Navigation("size");
+                    b.Navigation("product");
 
-                    b.Navigation("unit");
+                    b.Navigation("size");
                 });
 #pragma warning restore 612, 618
         }

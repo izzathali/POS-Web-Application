@@ -72,4 +72,3 @@ E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.WebApp\bin\
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.WebApp\bin\Debug\net6.0\POS.IBL.dll
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.WebApp\bin\Debug\net6.0\POS.BL.pdb
 E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.WebApp\bin\Debug\net6.0\POS.IBL.pdb
-E:\LEARNING\POS - Web App\POS-Web-Application\POS.WebApplication\POS.WebApp\obj\Debug\net6.0\POS.WebApp.MvcApplicationPartsAssemblyInfo.cs

@@ -80,8 +80,8 @@ namespace POS.WebApp.Controllers
 
             ViewData["CategoryId"] = new SelectList(await _iCategoryRepo.GetAll(), "CategoryId", "Category");
             ViewData["BrandId"] = new SelectList(await _iBrandRepo.GetAll(), "BrandId", "Brand");
-            ViewData["ColourId"] = new SelectList(await _iColourRepo.GetAll(), "ColourId", "ColourCode");
-            ViewData["SizeId"] = new SelectList(await _iSizeRepo.GetAll(), "SizeId", "Size");
+            //ViewData["ColourId"] = new SelectList(await _iColourRepo.GetAll(), "ColourId", "ColourCode");
+            //ViewData["SizeId"] = new SelectList(await _iSizeRepo.GetAll(), "SizeId", "Size");
             ViewData["UnitId"] = new SelectList(await _iUnitRepo.GetAll(), "UnitId", "Unit");
 
             return View(productM);
