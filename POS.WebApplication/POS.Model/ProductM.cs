@@ -29,6 +29,7 @@ namespace POS.Model
         public UnitM? unit { get; set; }
         public BrandM? brand { get; set; }
        
-        ICollection<SubProductM>? subproducts { get; set; }
+        //ICollection<SubProductM>? subproducts { get; set; }
+        public virtual List<SubProductM> subproducts { get; set; } = new List<SubProductM>();
     }
 }

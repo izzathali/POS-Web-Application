@@ -48,13 +48,16 @@ namespace POS.WebApp.Controllers
             ViewData["SizeId"] = new SelectList(await _iSizeRepo.GetAll(), "SizeId", "Size");
             ViewData["UnitId"] = new SelectList(await _iUnitRepo.GetAll(), "UnitId", "Unit");
 
-            return View();
+            ProductM product = new ProductM();
+            product.subproducts.Add(new SubProductM() { SubProductId = 1 });
+
+            return View(product);
         }
 
         // POST: ProductController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind("ProductId,ProductCode,Barcode,ProductName,ProductDescription,UnitCost,CostCode,SellingPrice,Discount,IsActive,CategoryId,UnitId,Zip,BrandId,SizeId,ColourId")] ProductM productM)
+        public async Task<ActionResult> Create(ProductM productM)
         {
             try
             {

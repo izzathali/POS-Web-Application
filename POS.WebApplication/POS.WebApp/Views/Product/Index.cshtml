@@ -36,7 +36,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="example1" class="table table-bordered table-striped">
+                        <table id="example1" class="table ">
                             <thead>
                                 <tr>
                                     <th>Barcode</th>
@@ -44,6 +44,7 @@
                                     <th>Category</th>
                                     <th>Unit</th>
                                     <th>Brand</th>
+                                    <th>Active</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -53,19 +54,110 @@
                                     {
                                         @foreach (var item in @Model)
                                         {
-                                            <tr>
-                                                <td>@item.Barcode</td>
+                                            <tr data-widget="expandable-table" aria-expanded="false">
+                                                <td>
+                                                    <span class="badge bg-warning float-right">
+                                                        @item.subproducts.Count() variation
+                                                    </span>
+                                                    <button type="button" class="btn btn-primary p-0">
+                                                        <i class="expandable-table-caret fas fa-caret-right fa-fw"> </i>
+                                                    </button>
+                                                    @item.Barcode
+                                                </td>
                                                 <td>@item.ProductName</td>
                                                 <td>@item.category?.Category</td>
                                                 <td>@item.unit?.Unit</td>
                                                 <td>@item.brand?.Brand</td>
-                                               
+                                                <td>
 
+                                                    <div class="form-group clearfix">
+                                                        <div class="icheck-success d-inline">
+                                                            @{
+                                                                string cbActive = @item.IsActive == true ? "checked" : "";
+                                                            }
+                                                            <input type="checkbox" id="checkboxPrimary3" disabled @cbActive>
+                                                            <label for="checkboxPrimary3">
+                                                                Active
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
                                                 <td>
                                                     <a class="btn btn-warning btn-xs" asp-action="Edit" asp-route-id="@item.ProductId"><i class="fas fa-edit me-1"></i></a>
                                                     <a class="btn btn-danger btn-xs" asp-action="Delete" asp-route-id="@item.ProductId"><i class="fas fa-trash me-1"></i></a>
                                                 </td>
                                             </tr>
+
+                                            @if (@item.subproducts.Count >= 1)
+                                            {
+                                                <tr class="expandable-body">
+                                                    <td colspan="7">
+                                                        <div class="p-0 card card-warning  card-outline ">
+
+
+                                                            <table class="table table-sm table-hover table-bordered table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width: 10px">#</th>
+                                                                        <th>Product Code</th>
+                                                                        <th>Size</th>
+                                                                        <th>Colour</th>
+                                                                        <th>Cost Code</th>
+                                                                        <th>Cost</th>
+                                                                        <th>Price</th>
+                                                                        <th>Discount</th>
+                                                                        <th>Stock Qty</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @{
+                                                                        int no = 1;
+                                                                    }
+                                                                    @foreach (var sub in item.subproducts)
+                                                                    {
+                                                                        <tr>
+                                                                            <td>
+                                                                                @no
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.ProductCode
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.size?.Size
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.colour?.ColourCode
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.CostCode
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.UnitCost
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.SellingPrice
+                                                                            </td>
+                                                                            <td>
+                                                                                @sub.Discount
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="badge bg-secondary">
+                                                                                    @sub.StockQty
+                                                                                </span>
+                                                                            </td>
+
+                                                                        </tr>
+
+                                                                        no++;
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            }
 
                                         }
                                     }
@@ -76,12 +168,12 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                   <th>Product Code</th>
                                     <th>Barcode</th>
                                     <th>Product</th>
                                     <th>Category</th>
                                     <th>Unit</th>
                                     <th>Brand</th>
+                                    <th>Active</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>

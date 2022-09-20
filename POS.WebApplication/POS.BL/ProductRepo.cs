@@ -37,6 +37,7 @@ namespace POS.BL
                 .Include(i => i.category)
                 .Include(i => i.unit)
                 .Include(i => i.brand)
+                .Include(i => i.subproducts)
                 .Where(i => i.IsDeleted == false)
                 .ToListAsync();
         }
